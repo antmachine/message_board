@@ -8,26 +8,11 @@
 
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-  <link href="assets/stylesheets/bootstrap.css" rel="stylesheet">
-
-
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fluid navbar-collapse" role="navigation">
-	<div class="container">
-		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-	</div>
+<nav class="navbar navbar-default navbar-fluid" role="navigation">
+<h3>TODO put signin button here</h3>
 </nav>
 
 
