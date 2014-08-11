@@ -9,14 +9,24 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </head>
+
 <body>
 
-<nav class="navbar navbar-default navbar-fluid" role="navigation">
-	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-	<%= link_to "Sign in", new_user_session_path, :method => :new %>
-	<% if user_signed_in? %>
-		<%= link_to "Your Posts", user_posts_path, :method => :get %>
-	<% end %>
+<nav class="navbar navbar-default navbar-fluid text-right" role="navigation">
+	<div class="col-sm-12">
+		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		<%= link_to "Sign in", new_user_session_path, :method => :new %>
+		<% if user_signed_in? %>
+			<%= link_to "Your Posts", user_posts_path, :method => :get %>
+		<% end %>
+
+		<div class="text-left">
+			<form action="posts/new" method="link">
+				<input type="submit" value="Create Post">
+			</form>
+		</div>
+		
+	</div>
 
 </nav>
 
