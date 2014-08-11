@@ -23,16 +23,21 @@ body {
 	max-width: 800px;
 }
 
-.navbar{
-	background: #4e4e4e;
-}
-
-.btn-primary{
-	background: #ffb900;
+.btn{
+	background: #9d9d9d;
+	color: white;
 }
 
 .post{
 	background: #f2f2f2;
+}
+
+.top{
+	background: #4e4e4e;
+}
+
+.post-date{
+	font-size: 10;
 }
 
 
