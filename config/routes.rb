@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   root 'posts#index'
   resources :posts
+  get '/user_posts' => 'posts#user_posts'
 
 
 end

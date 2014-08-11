@@ -1,11 +1,9 @@
-<h1>Message Board</h1>
-
 <form action="posts/new" method="link">
 	<input type="submit" value="Create Post">
 </form>
 
-
 <% @posts.each do |post| %>
-	<p>Post: <%= p post.content %></p>
+	<p>Post:  <%= p post.content %></p>
+	<%= link_to "Edit", edit_post_path(post.id) %>
 <% end %>
 

@@ -35,6 +35,11 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 	end
 
+	def user_posts
+		@user = current_user
+		@posts = @user.posts
+	end
+
 	private
 	def post_params
 		params.require(:post).permit(:content)

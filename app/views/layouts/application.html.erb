@@ -14,6 +14,9 @@
 <nav class="navbar navbar-default navbar-fluid" role="navigation">
 	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 	<%= link_to "Sign in", new_user_session_path, :method => :new %>
+	<% if user_signed_in? %>
+		<%= link_to "Your Posts", user_posts_path, :method => :get %>
+	<% end %>
 
 </nav>
 
