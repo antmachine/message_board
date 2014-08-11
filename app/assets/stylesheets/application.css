@@ -28,6 +28,13 @@ body {
 }
 
 .btn-primary{
-	/*background: #ffb900;*/
-	/*.buttonBackground(#ffb900, #4e4e4e);*/
+	background: #ffb900;
 }
+
+.post{
+	background: #f2f2f2;
+}
+
+
+
+

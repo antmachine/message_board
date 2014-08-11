@@ -11,24 +11,27 @@
 </head>
 
 <body>
-
-<nav class="navbar navbar-fluid" role="navigation">
 	<div class="col-sm-12 text-right">
 		<p>
 			<%= link_to "Your Posts", user_posts_path , :method => :get if user_signed_in? %> |
 			<%= link_to "Login", new_user_session_path, :method => :new if current_user.nil? %> |
 			<%= link_to "Logout", destroy_user_session_path , :method => :delete if user_signed_in? %>
 		</p>
-
-		<div class="text-left">
-			<form action="posts/new" method="link">
-				<input type="submit" value="Create Post">
-			</form>
-		</div>
-
 	</div>
 
-</nav>
+	<div class="col-sm-12 text-left">
+		<h1>Message Board</h1>
+	</div>
+	
+
+<span class="top">
+	<div class="text-left col-sm-12">
+		<form action="posts/new" method="link">
+			<input class="btn-primary" type="submit" value="Create Post">
+		</form>
+	</div>
+</span>
+
 
 
 

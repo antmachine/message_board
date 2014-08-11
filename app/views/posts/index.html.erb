@@ -1,14 +1,9 @@
-<h1>Message Board</h1>
-
 <div class="container col-sm-12 text-left">
-	<form action="posts/new" method="link">
-		<input type="submit" value="Create Post">
-	</form>
-
-
 	<% @posts.each do |post| %>
-		<p class="post">
-			Post: <%= p post.content %>
+		<div class="post col-sm-12">
+			<%= p post.content %>
+		</div>
+		<p class="post-date col-sm-12">
 			Posted <%= post.created_at.to_formatted_s(:long) %>
 		</p>
 	<% end %>

@@ -1,10 +1,8 @@
 class PostsController < ApplicationController
-
-	before_filter :authenticate_user!, :except => [:show, :index] 
+	before_action :authenticate_user!
 
 	def index
 		@posts = Post.all
-		@user = current_user
 	end
 
 	def new
@@ -38,6 +36,7 @@ class PostsController < ApplicationController
 	end
 
 	def user_posts
+		@user = current_user
 		@posts = @user.posts
 	end
 
