@@ -12,9 +12,9 @@
 <body>
 
 <nav class="navbar navbar-default navbar-fluid" role="navigation">
-	<form action="/users/sign_up" method="get">
-		<button>Sign Up</button>
-	</form>
+	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+	<%= link_to "Sign in", new_user_session_path, :method => :new %>
+
 </nav>
 
 
