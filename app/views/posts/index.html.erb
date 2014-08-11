@@ -1,1 +1,4 @@
-<h1>This view will show all the of posts in the database.</h1>
+
+<% @posts.each do |post| %>
+	<p>Post: <%= p post.content %></p>
+	<% end %>

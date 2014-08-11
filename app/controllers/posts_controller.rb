@@ -3,7 +3,11 @@ class PostsController < ApplicationController
 		@posts = Post.all
 	end
 
-	def create
-		
+	def show
+		@post = Post.find(params[:id])
+	end
+
+	def post_params
+		params.require(:post).permit(:content)
 	end
 end
