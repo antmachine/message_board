@@ -18,6 +18,16 @@
 .container{
 	text-align: center;
 }
+
 body {
 	max-width: 800px;
+}
+
+.navbar{
+	background: #4e4e4e;
+}
+
+.btn-primary{
+	/*background: #ffb900;*/
+	/*.buttonBackground(#ffb900, #4e4e4e);*/
 }

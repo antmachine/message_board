@@ -1,6 +1,9 @@
 <%= form_for @post do |f| %>
-	<%= label_tag(:content, "Post:") %>
-	<%= f.text_area :content %>
-	<%= f.button("Submit Post") %>
-
+	<label for="content">Post:</label>
+	<textarea id="post_content" name="post[content]">
+	</textarea>
+	
+	<div class="btn-primary">
+		<button name="button" type="submit">Submit Post</button>
+	</div>
 <% end %>

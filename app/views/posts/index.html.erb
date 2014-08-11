@@ -7,7 +7,9 @@
 
 
 	<% @posts.each do |post| %>
-		<p>Post: <%= p post.content %></p>
-		<p>Posted <%= post.created_at.to_formatted_s(:long) %> </p>
+		<p class="post">
+			Post: <%= p post.content %>
+			Posted <%= post.created_at.to_formatted_s(:long) %>
+		</p>
 	<% end %>
 </div>
