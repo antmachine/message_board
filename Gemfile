@@ -31,6 +31,7 @@ group :development do
 	gem 'rspec'
 	gem 'rspec-rails'
 	gem 'spring'
+	gem 'pry'
 end
 
 group :production do

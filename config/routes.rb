@@ -2,14 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   
   root 'posts#index'
+  resources :posts
+
 
 end
 
 =begin
-  
-rescue Exception => e
-  
-end
                   Prefix Verb   URI Pattern                    Controller#Action
         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
             user_session POST   /users/sign_in(.:format)       devise/sessions#create
@@ -27,5 +25,13 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
                          PUT    /users(.:format)               devise/registrations#update
                          DELETE /users(.:format)               devise/registrations#destroy
                     root GET    /                              posts#index
+                   posts GET    /posts(.:format)               posts#index
+                         POST   /posts(.:format)               posts#create
+                new_post GET    /posts/new(.:format)           posts#new
+               edit_post GET    /posts/:id/edit(.:format)      posts#edit
+                    post GET    /posts/:id(.:format)           posts#show
+                         PATCH  /posts/:id(.:format)           posts#update
+                         PUT    /posts/:id(.:format)           posts#update
+                         DELETE /posts/:id(.:format)           posts#destroy  
 
 =end
