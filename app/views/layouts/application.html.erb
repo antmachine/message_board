@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
 	<div class="col-sm-12 text-right">
 		<p>
 			<%= link_to "Your Posts", user_posts_path , :method => :get if user_signed_in? %> |
@@ -25,11 +26,16 @@
 	
 
 <span class="top">
-	<div class="text-left col-sm-12">
+	<div class="text-left col-sm-6">
 		<form action="posts/new" method="link">
 			<input class="btn-primary" type="submit" value="Create Post">
 		</form>
 	</div>
+
+	<div class="col-sm-6 text-right">
+		<%= link_to"List", root_path %>
+	</div>
+
 </span>
 
 
