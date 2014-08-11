@@ -5,6 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Post.create([{ content: 'Test post 1' }])
-Post.create([{ content: 'Test post 2' }])
-Post.create([{ content: 'Test post 3' }])
+Post.create([{
+	user_id: '12',
+	content: 'Test post 1'
+}])
+Post.create([{
+	user_id: '13',
+	content: 'Test post 2'
+}])
+Post.create([{
+	user_id: '14',
+	content: 'Test post 3'
+}])
+
+User.create([{
+	email: 'test_user@1.com',
+	password: 'testtest',
+	password_confirmation: 'testtest',
+	id: '12'
+}])
