@@ -11,22 +11,24 @@
 </head>
 
 <body>
-
-	<div class="col-sm-12 text-right">
-		<p>
-			<%= link_to "Your Posts", user_posts_path , :method => :get if user_signed_in? %> |
-			<%= link_to "Login", new_user_session_path, :method => :new if current_user.nil? %> |
-			<%= link_to "Logout", destroy_user_session_path , :method => :delete if user_signed_in? %>
-		</p>
+	<div class="row">
+		<div class="col-sm-12 text-right">
+			<p>
+				<%= link_to "Your Posts", user_posts_path , :method => :get if user_signed_in? %> |
+				<%= link_to "Login", new_user_session_path, :method => :new if current_user.nil? %> |
+				<%= link_to "Logout", destroy_user_session_path , :method => :delete if user_signed_in? %>
+			</p>
+		</div>
 	</div>
 
-	<div class="col-sm-12 text-left">
-		<h1>Message Board</h1>
+	<div class="row">
+		<div class="col-sm-12 text-left">
+			<h1>Message Board</h1>
+		</div>
 	</div>
-	
 
-<div class="top col-sm-12">
-	<div class="text-left col-sm-6">
+<div class="top row">
+	<div class="col-sm-6 text-left">
 		<form action="posts/new" method="link">
 			<input class="btn" type="submit" value="Create Post">
 		</form>

@@ -14,13 +14,12 @@
  *= require_self
  *= require bootstrap.css
  */
- @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-.container{
-	text-align: center;
+body {
+	max-width: 1200px;
 }
 
-body {
-	max-width: 800px;
+.container{
+	text-align: center;
 }
 
 .btn{
@@ -34,10 +33,12 @@ body {
 
 .top{
 	background: #4e4e4e;
+	margin-bottom: 10px;
 }
 
 .post-date{
-	font-size: 10;
+	font-size: 12px;
+	background: #f2f2f2;
 }
 
 

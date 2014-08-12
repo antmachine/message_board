@@ -1,5 +1,26 @@
-<% @posts.each do |post| %>
-	<p>Post:  <%= p post.content %></p>
-	<%= link_to "Edit", edit_post_path(post.id) %>
-<% end %>
+<div class="container">
+	<% @posts.each do |post| %>
+		<div class="row">
+			<div class="span12">
 
+				<div class="row">
+
+					<div class="post span1 col-sm-offset-(-11)">
+						<%= link_to edit_post_path(post.id), class: "btn-default" do %>
+							<span class="glyphicon-pencil"></span>
+						<% end %>
+					</div>
+				
+					<div class="post span11 text-left col-sm-offset-1">
+						<%= p post.content %>
+					</div>
+
+					<p class="post-date span11 text-left col-sm-offset-1">
+						Posted <%= post.created_at.to_formatted_s(:long) %>
+					</p>
+
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>
