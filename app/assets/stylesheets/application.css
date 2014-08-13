@@ -43,6 +43,7 @@ body {
 
 #post_content{
 	resize: none;
+	min-height: 300px;
 }
 
 
