@@ -5,9 +5,9 @@
 	</div>
 	</div>
 		<%= form_for @post do |f| %>
-		<div class="row-fluid">
+		<div class="row">
 				<div class="row">
-					<label for="title" class="span6 text-left">Title</label>
+					<label for="title" class="col-sm-12 text-left">Title</label>
 					<input id="post_title" name="post[title]" class="col-sm-3 text-left"></input>
 				</div>
 
@@ -18,7 +18,7 @@
 
 				<div class="row">
 					<label for="content" class="col-sm-12 text-left">Message</label>
-					<textarea id="post_content" name="post[content]" class="col-sm-6"></textarea>
+					<textarea id="post_content" name="post[content]" class="col-sm-12"></textarea>
 				</div>
 
 				<div class="btn-pirmary col-sm-6 col-sm-offset-6 text-right">
