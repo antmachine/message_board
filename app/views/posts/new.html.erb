@@ -1,11 +1,28 @@
 <div class="container">
-	
+	<div class="row">
+	<div class="col-sm-12 text-left">
+		<h2>Submit a Posting</h2>
+	</div>
+	</div>
 		<%= form_for @post do |f| %>
 		<div class="row">
-				<label for="content" class="col-sm-6 col-sm-offset-6 text-left">Message</label>
-				<textarea id="post_content" name="post[content]" class="col-sm-6 col-sm-offset-6">
-				</textarea>
-				
+				<div class="row">
+					<label for="title" class="text-left col-sm-1">Title</label>
+					<label for="content" class="col-sm-1 col-sm-offset-5 text-left">Message</label>
+				</div>
+
+				<div class="row">
+					<input id="post_title" name="post[title]" class="col-sm-3 text-left"></input>
+					<textarea id="post_content" name="post[content]" class="col-sm-6 col-sm-offset-3"></textarea>
+				</div>
+
+				<div class="row">
+					<label for "name" class="text-left col-sm-1">Name</label>
+				</div>
+				<div class="row">
+					<input id="post_name" name="post[name]" class="col-sm-3 text-left"></input>
+				</div>
+
 				<div class="btn-pirmary col-sm-6 col-sm-offset-6 text-right">
 					<button name="button" type="submit">Submit Post</button>
 				</div>

@@ -3,8 +3,8 @@
 		<div class="post col-sm-12">
 			<%= p post.content %>
 		</div>
-		<p class="post-date col-sm-12 text-left">
-			Posted <%= post.created_at.to_formatted_s(:long) %>
+		<p class="post-info col-sm-12 text-left">
+			Posted by <%= post.name %> on <%= post.created_at.to_formatted_s(:long) %>
 		</p>
 	<% end %>
 </div>

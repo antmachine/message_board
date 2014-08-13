@@ -36,11 +36,13 @@ body {
 	margin-bottom: 10px;
 }
 
-.post-date{
+.post-info{
 	font-size: 12px;
 	background: #f2f2f2;
 }
 
-
+#post_content{
+	resize: none;
+}
 
 
