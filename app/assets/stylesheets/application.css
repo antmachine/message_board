@@ -47,6 +47,12 @@ body {
 	margin-bottom: 5px;
 }
 
+.post-content-display{
+	overflow: auto;
+	max-height: 100px;
+	margin: 5px 5px 5px 5px; 
+}
+
 #post_content{
 	resize: none;
 	min-height: 300px;
