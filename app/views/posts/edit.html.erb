@@ -1,7 +1,16 @@
-<h3>Edit your post</h3>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 text-left">
+			<h3>Edit your post</h3>
+		</div>
+	</div>
+	<form>
+	<div class="row">
+		<label for="content" class="col-sm-12 text-left">Message</label>
+		<textarea id="post_content" name="post[content]" class="col-sm-12"><%= @post.content  %></textarea>
+	</div>
+	<div class="col-sm-6 col-sm-offset-6 text-right">
+	<button type="submit" class="btn-submit">Update Post</button>
+</div>
+</div>
 
-<%= form_for @post do |f| %>
-	<%= label_tag(:content, "Post:") %>
-	<%= f.text_area :content %>
-	<%= f.button("Update Post") %>
-<% end %>

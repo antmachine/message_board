@@ -1,27 +1,19 @@
 <div class="container">
-	<% @posts.each do |post| %>
-		<div class="row">
+	<div class="row">
+		<% @posts.each do |post| %>
 
-
-					<div class="post">
-						<%= link_to edit_post_path(post.id), class: "btn-default" do %>
-							<span class="glyphicon-pencil"></span>
-						<% end %>
-					</div>
-
-					<button type="button" class="btn btn-default btn-lg">
-   <span class="glyphicon-pencil">
-   </span>
-</button
-				
-					<div class="post text-left">
-						<%= p post.content %>
-					</div>
-
-					<p class="post-date span11 text-left col-sm-offset-1">
-						Posted <%= post.created_at.to_formatted_s(:long) %>
-					</p>
-
+		<form action="<%= edit_post_path(post.id)  %>" method ="get">
+			<button type="submit" class="btn btn-default btn-lg glyphicon-pencil">
+			</button>
+		</form>
+			
+			<div class="post text-left">
+				<%= p post.content %>
 			</div>
-	<% end %>
+
+			<p class="post-date span11 text-left col-sm-offset-1">
+				Posted <%= post.created_at.to_formatted_s(:long) %>
+			</p>
+		<% end %>
+	</div>
 </div>
