@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!, :except => [:show, :index]
 
 	def index
-		@posts = Post.all
+		@posts = Post.all.sort_by(&:updated_at).reverse
 	end
 
 	def new
@@ -17,8 +17,8 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
-		@post.destroy
-		redirect_to root_path
+		Post.delete(params[:id])
+		redirect_to '/user_posts'
 	end
 	
 	def edit
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
 
 	def user_posts
 		@user = current_user
-		@posts = @user.posts
+		@posts = @user.posts.sort_by(&:updated_at).reverse
 	end
 
 	private
