@@ -1,10 +1,13 @@
 <div class="container col-sm-12 text-left row">
 	<% @posts.each do |post| %>
 		<div class="post col-sm-12">
+			<h4><%= p post.title %></h4>
+		</div>
+		<div class="post col-sm-12">
 			<%= p post.content %>
 		</div>
-		<p class="post-info col-sm-12 text-left">
-			Posted by <%= post.name %> on <%= post.created_at.to_formatted_s(:long) %>
-		</p>
+		<div class="post-info col-sm-12 text-left">
+			Posted by <%= post.name %> on <%= post.updated_at.to_formatted_s(:long) %>
+		</div>
 	<% end %>
 </div>
