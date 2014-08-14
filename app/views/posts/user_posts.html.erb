@@ -1,19 +1,23 @@
-<div class="container">
-	<div class="row">
-		<% @posts.each do |post| %>
+<div class="container col-sm-12 text-left">
+	<% @posts.each do |post| %>
+		<div class="row post-area">
 
 		<form action="<%= edit_post_path(post.id)  %>" method ="get">
 			<button type="submit" class="btn btn-default btn-lg glyphicon-pencil">
 			</button>
 		</form>
-			
-			<div class="post text-left">
-				<%= p post.content %>
-			</div>
+		
+		<div class="col-sm-11 col-sm-offset-1">
+			<h4><%= p post.title %></h4>
+		</div>
+		
+		<div class="col-sm-11 col-sm-offset-1">
+			<%= p post.content %>
+		</div>
 
-			<p class="post-date span11 text-left col-sm-offset-1">
-				Posted <%= post.created_at.to_formatted_s(:long) %>
-			</p>
-		<% end %>
-	</div>
+		<div class="post-info col-sm-11 col-sm-offset-1">
+			Posted <%= post.updated_at.to_formatted_s(:long) %>
+		</div>
+		</div>
+	<% end %>
 </div>
