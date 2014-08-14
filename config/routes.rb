@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   
   root 'posts#index'
-  resources :posts
+  resources :posts, except: :update
   get '/user_posts' => 'posts#user_posts'
+
+  post '/edit/:id' => 'posts#update'
+
 
 
 end

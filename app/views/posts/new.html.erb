@@ -4,7 +4,7 @@
 		<h2>Submit a Posting</h2>
 	</div>
 	</div>
-		<from>
+		<from action="/posts" method="post">
 		<div class="row">
 				<div class="row">
 					<label for="title" class="col-sm-12 text-left">Title</label>
@@ -29,3 +29,8 @@
 		</form>
 <!-- try padding! -->
 </div>
+<%= form_for @post do |f| %>
+<%= label_tag(:content, "Post:") %>
+<%= f.text_area :content %>
+<%= f.button("Submit Post") %>
+<% end %>
