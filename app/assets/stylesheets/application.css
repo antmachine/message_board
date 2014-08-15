@@ -99,3 +99,14 @@ body {
 .hide{
 	display: none;
 }
+
+
+#content-box{
+  position: relative;
+  z-index: 2;
+}
+#hidden-link{
+	opacity: 0;
+  position: absolute;
+  z-index: 1;
+}

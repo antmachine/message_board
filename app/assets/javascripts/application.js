@@ -16,9 +16,9 @@
 //= require_tree .
 $(document).ready(function () {
  
-$( ".post-content-display" )
+$( "#content" )
 .mouseenter(function() {
-  $( this ).fadeTo( "slow" , 0.3);
+  $( this ).fadeTo("slow" , 0.3);
 })
 .mouseleave(function() {
 	$( this ).fadeTo("slow", 1.0);
@@ -27,11 +27,12 @@ $( ".post-content-display" )
 
 $( "#hidden-link" )
 .mouseenter(function() {
-	$( this ).removeClass("hide");
-})
-.mouseleave(function(){
-	$( this ).addClass("hide");
+	$( this ).fadeIn("slow, 1.0");
+	$( this ).css("z-index: 3;", "opacity: 1;");
 });
+// .mouseleave(function(){
+// 	$( this ).addClass("hide");
+// });
 
 });
 

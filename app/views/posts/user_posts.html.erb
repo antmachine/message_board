@@ -22,12 +22,14 @@
 		</div>
 
 		<div class="col-sm-11 col-sm-offset-1 post-content-display">
-				<%= link_to post_path(post.id) do %>	
-					<div id="hidden-link" class="hide text-center">
+			<%= link_to post_path(post.id) do %>
+					<div id="hidden-link" class="col-sm-11 col-sm-offset1 text-center">
 					  <h2>Read Full Post</h2>
 					</div>
 				<% end %>
-				<%= post.content %>
+				<div id="content">
+					<%= post.content %>
+				</div>
 		</div>
 
 		<div class="post-time col-sm-11 col-sm-offset-1">
