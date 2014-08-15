@@ -95,3 +95,7 @@ body {
 .glyphicon{
 	margin: 5px 5px 5px 5px;
 }
+
+.hide{
+	display: none;
+}

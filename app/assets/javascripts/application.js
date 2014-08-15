@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function () {
+ 
+$( ".post-content-display" )
+.mouseenter(function() {
+  $( this ).fadeTo( "slow" , 0.3);
+})
+.mouseleave(function() {
+	$( this ).fadeTo("slow", 1.0);
+});
+
+
+$( "#hidden-link" )
+.mouseenter(function() {
+	$( this ).removeClass("hide");
+})
+.mouseleave(function(){
+	$( this ).addClass("hide");
+});
+
+});
+
+
+
