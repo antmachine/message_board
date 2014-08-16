@@ -39,6 +39,7 @@ body {
 
 .top-bar{
 	background: #4e4e4e;
+	border-radius: 5px;
 	margin-bottom: 10px;
 }
 

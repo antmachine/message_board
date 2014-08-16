@@ -20,26 +20,23 @@
 			</p>
 		</div>
 	</div>
-
 	<div class="row">
 		<div class="col-sm-12">
 			<h1>Message Board</h1>
 		</div>
 	</div>
-
-<div class="top-bar row">
-	<div class="col-sm-6">
-		<form action="/posts/new" method="link">
-			<input class="btn" type="submit" value="Create Post">
-		</form>
+	<div class="row">
+		<div class="top-bar">
+			<div class="col-sm-6">
+				<form action="/posts/new" method="link">
+					<input class="btn" type="submit" value="Create Post">
+				</form>
+			</div>
+		<div class="col-sm-6 text-right list-button">
+			<%= link_to"List", root_path %>
+		</div>
 	</div>
-
-	<div class="col-sm-6 text-right list-button">
-		<%= link_to"List", root_path %>
-	</div>
-
 </div>
-
 
 
 
