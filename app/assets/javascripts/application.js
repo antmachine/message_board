@@ -25,15 +25,6 @@ $( "#content" )
 });
 
 
-$( "#hidden-link" )
-.mouseenter(function() {
-	$( this ).fadeIn("slow, 1.0");
-	$( this ).css("z-index: 3;", "opacity: 1;");
-});
-// .mouseleave(function(){
-// 	$( this ).addClass("hide");
-// });
-
 });
 
 

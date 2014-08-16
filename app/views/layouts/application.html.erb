@@ -26,12 +26,14 @@
 		</div>		
 		<div class="row top-bar">
 			<div class="col-sm-6">
-				<form action="/posts/new" method="link">
-					<input class="btn create-post-button" type="submit" value="Create Post">
-				</form>
+				<div class="create-post">
+					<form action="/posts/new" method="link">
+						<input class="btn create-post-button" type="submit" value="Create Post">
+					</form>
+			  </div>
 			</div>
-			<div class="col-sm-6 text-right list-link">
-				<%= link_to "List", root_path %>
+			<div class="col-sm-6 text-right">
+				<%= link_to "List of Posts", root_path %>
 			</div>
 		</div>
 		<%= yield %>
