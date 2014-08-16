@@ -1,31 +1,31 @@
 <div class="container">
 	<div class="row">
-	<div class="col-sm-12 text-left">
-		<h2>Submit a Posting</h2>
-	</div>
-	</div>
-		<form action="/posts" method="post">
-		<%= token_tag form_authenticity_token %>
-		<div class="row">
-				<div class="row">
-					<label for="title" class="col-sm-12 text-left">Title</label>
-					<input id="post_title" name="post[title]" class="col-sm-3 text-left"></input>
-				</div>
-
-				<div class="row">
-					<label for "name" class="col-sm-12 text-left">Name</label>
-					<input id="post_name" name="post[name]" class="col-sm-3 text-left"></input>
-				</div>
-
-				<div class="row">
-					<label for="content" class="col-sm-12 text-left">Message</label>
-					<textarea id="post_content" name="post[content]" class="col-sm-12"></textarea>
-				</div>
-
-				<div class="col-sm-6 col-sm-offset-6 text-right">
-					<button name="button" type="submit" class="btn-submit">Submit Post</button>
-				</div>
-
+		<div class="col-sm-12">
+			<h2>Submit a Posting</h2>
 		</div>
-		</form>
+	</div>
+	<form action="/posts" method="post" role="form">
+		<%= token_tag form_authenticity_token %>
+    <div class="row">
+    	<div class="col-sm-4">
+				<div class="form-group">
+					<label for="post_title" >Title</label>
+					<input id="post_title" name="post[title]" class="form-control">
+				</div>  		
+				<div class="form-group">
+					<label for="post_name" >Name</label>
+					<input id="post_name" name="post[name]" class="form-control">
+				</div>
+			</div>
+    	<div class="col-sm-8">
+    		<div class="form-group">
+					<label for="post_content">Message</label>
+					<textarea id="post_content" name="post[content]" class="form-control"></textarea>
+				</div>
+    	</div>
+		</div>
+		<div class="col-sm-12 text-right">
+			<button name="button" type="submit" class="btn-submit">Submit Post</button>
+		</div>
+	</form>
 </div>

@@ -20,13 +20,15 @@ body {
 	max-width: 1200px;
 }
 
-.container{
-	text-align: center;
-}
-
 .btn{
 	background: #9d9d9d;
 	color: white;
+}
+
+.edit-button{
+	background: none;
+	outline: none;
+	border: none;
 }
 
 .post-area{
@@ -55,7 +57,7 @@ body {
 
 #post_content{
 	resize: none;
-	min-height: 300px;
+	min-height: 110px;
 }
 
 @media (max-width: 767px){
