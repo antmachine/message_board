@@ -16,16 +16,13 @@
 //= require_tree .
 $(document).ready(function () {
  
-$( "#content" )
-.mouseenter(function() {
-  $( this ).fadeTo("slow" , 0.3);
+$( ".post-area" )
+.mouseover(function() {
+  $( this ).css({background: "#ffb900"});
 })
-.mouseleave(function() {
-	$( this ).fadeTo("slow", 1.0);
+.mouseout(function(){
+	$( this ).css({background: "#f2f2f2"});
 });
 
 
 });
-
-
-
