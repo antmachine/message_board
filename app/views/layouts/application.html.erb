@@ -11,36 +11,30 @@
 </head>
 
 <body>
-	<div class="row">
-		<div class="col-sm-12 text-right">
-			<p>
-				<%= link_to "Your Posts", user_posts_path , :method => :get if user_signed_in? %> |
-				<%= link_to "Login", new_user_session_path, :method => :new if current_user.nil? %> |
-				<%= link_to "Logout", destroy_user_session_path , :method => :delete if user_signed_in? %>
-			</p>
+	<div class="container">
+		<div class="row">
+			<div class="text-right">
+				<p>
+					<%= link_to "Your Posts", user_posts_path , :method => :get if user_signed_in? %> |
+					<%= link_to "Login", new_user_session_path, :method => :new if current_user.nil? %> |
+					<%= link_to "Logout", destroy_user_session_path , :method => :delete if user_signed_in? %>
+				</p>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12">
+		<div class="row">
 			<h1>Message Board</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class="top-bar">
+		</div>		
+		<div class="row top-bar">
 			<div class="col-sm-6">
 				<form action="/posts/new" method="link">
-					<input class="btn" type="submit" value="Create Post">
+					<input class="btn create-post-button" type="submit" value="Create Post">
 				</form>
 			</div>
-		<div class="col-sm-6 text-right list-button">
-			<%= link_to"List", root_path %>
+			<div class="col-sm-6 text-right list-link">
+				<%= link_to "List", root_path %>
+			</div>
 		</div>
+		<%= yield %>
 	</div>
-</div>
-
-
-
-<%= yield %>
-
 </body>
 </html>

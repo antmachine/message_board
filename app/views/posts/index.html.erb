@@ -1,6 +1,5 @@
-<div class="container col-sm-12">
-	<% @posts.each do |post| %>
-		<div class="row post-area">
+<% @posts.each do |post| %>
+	<div class="row post-area">
 		<div class="col-sm-12">
 			<h4><%= p post.title %></h4>
 		</div>
@@ -10,6 +9,5 @@
 		<div class="post-info col-sm-12">
 			Posted by <%= post.name %> on <%= post.updated_at.to_formatted_s(:long) %>
 		</div>
-		</div>
-	<% end %>
-</div>
+	</div>
+<% end %>

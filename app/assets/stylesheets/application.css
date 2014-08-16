@@ -20,9 +20,11 @@ body {
 	max-width: 1200px;
 }
 
-.btn{
+
+.create-post-button{
 	background: #9d9d9d;
 	color: white;
+	margin: 5px 5px 5px 5px; 
 }
 
 .edit-button{
@@ -31,6 +33,9 @@ body {
 	border: none;
 }
 
+.list-link{
+	color: white;
+}
 .post-area{
 	background: #f2f2f2;
 	border-radius: 5px;
