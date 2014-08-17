@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-sm-12">
 		<% @posts.each do |post| %>
-		<div class="post-area row">
+		<div class="row post-area">
 			<div class="col-sm-1">
 				<form action="<%= edit_post_path(post.id)  %>" method ="get" role="form">
 				<button type="submit" class="btn-lg edit-button"><span class="glyphicon glyphicon-pencil"></span></button>

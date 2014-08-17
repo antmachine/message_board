@@ -1,12 +1,17 @@
 <% @posts.each do |post| %>
 	<div class="row post-area">
-		<div class="col-sm-12">
-			<h4><%= p post.title %></h4>
+		<div class="col-sm-1">
+			<form action="<%= post_path(post.id)  %>" method ="get" role="form">
+				<button type="submit" class="btn-lg edit-button"><span class="glyphicon glyphicon-eye-open"></span></button>
+			</form>
 		</div>
-		<div class="col-sm-12 post-content-display">
+		<div class="col-sm-11">
+			<h4><%= p post.title %></h4>
+		</div>		
+		<div class="col-sm-11 col-sm-offset-1 post-content-display">
 			<%= p post.content %>
 		</div>
-		<div class="post-info col-sm-12">
+		<div class="post-info col-sm-11 col-sm-offset-1">
 			Posted by <%= post.name %> on <%= post.updated_at.to_formatted_s(:long) %>
 		</div>
 	</div>
