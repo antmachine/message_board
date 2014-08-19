@@ -19,9 +19,11 @@ $(document).ready(function () {
 $( ".post-area" )
 .mouseover(function() {
   $( this ).css({background: "#ffb900"});
+  $( ".post-time" ).css({background: "#ffb900"});
 })
 .mouseout(function(){
 	$( this ).css({background: "#f2f2f2"});
+	$( ".post-time" ).css({background: "#f2f2f2"});
 });
 
 });
